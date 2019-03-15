@@ -1,0 +1,25 @@
+{
+	"name": "geoffdusome",
+	"description": "theme for personal site",
+	"version": "1.0.0",
+	"scripts": {
+		"gulp": "gulp"
+	},
+	"devDependencies": {
+		"gulp": "*",
+		"jshint": "*",
+		"gulp-autoprefixer": "*",
+		"gulp-jshint": "*",
+		"gulp-notify": "*",
+		"gulp-plumber": "*",
+		"gulp-sass": "*",
+		"gulp-sourcemaps": "*",
+		"gulp-uglify": "*",
+		"gulp-util": "*",
+		"gulp-concat": "*",
+		"gulp-replace": "*",
+		"browser-sync": "*",
+		"jshint-stylish": "*",
+		"util": "*"
+	}
+}
