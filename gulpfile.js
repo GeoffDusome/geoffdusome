@@ -11,6 +11,7 @@ var notify = require('gulp-notify');
 var concat = require('gulp-concat');
 var replace = require('gulp-replace');
 var browserSync = require('browser-sync').create();
+const metaBuilder = require('@geoffdusome/acf-meta-builder');
 
 // Plumber Error function
 var onError = function(error) {
@@ -18,7 +19,7 @@ var onError = function(error) {
 }
 
 // Update version variable in functions.php automatically
-// $tbx_version = '1.00';
+// $theme_version = '1.00';
 gulp.task('version', function(done) {
     gulp.src(['functions.php'])
         .pipe(replace(/\$theme_version = \'(.*)\';/g, function(match, p1) {
@@ -27,6 +28,17 @@ gulp.task('version', function(done) {
         }))
         .pipe(gulp.dest('./'));
     done();
+});
+
+gulp.task('buildMeta', function( done ) {
+    metaBuilder.createMeta(['functions.php', 'header.php', 'footer.php'])
+        .then(function(result) {
+            console.log(result);
+            done();
+        }, function(err) {
+            console.log(err);
+            done();
+        });
 });
 
 // SASS
@@ -73,6 +85,7 @@ gulp.task('serve',function() {
 
     gulp.watch(['css/**/*.scss', '!css/admin/*.scss', 'css/main.scss'], gulp.parallel('sass', 'version'));
     gulp.watch(['js/*.js'], gulp.parallel('js', 'version'));
+    gulp.watch(['*.php'], gulp.series('buildMeta'));
     gulp.watch(['*.php', '!functions.php']).on("change", browserSync.reload);
 });
 

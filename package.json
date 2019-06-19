@@ -5,7 +5,7 @@
 	"scripts": {
 		"gulp": "gulp"
 	},
-	"devDependencies": {
+	"dependencies": {
 		"gulp": "*",
 		"jshint": "*",
 		"gulp-autoprefixer": "*",
@@ -20,6 +20,7 @@
 		"gulp-replace": "*",
 		"browser-sync": "*",
 		"jshint-stylish": "*",
-		"util": "*"
+		"util": "*",
+		"@geoffdusome/acf-meta-builder": "*"
 	}
 }

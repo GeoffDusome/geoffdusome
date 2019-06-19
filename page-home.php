@@ -1,7 +1,8 @@
+<?php // Template Name: Home ?>
 <?php get_header(); ?>
 
 	<main class="page-wrap">
-
+		
 		<section class="header-image-wrap">
 			<div class="video">
 				<video poster="<?php echo get_template_directory_uri().'/dist/video/hero.jpg'; ?>" autoplay loop muted data-object-fit="cover">
