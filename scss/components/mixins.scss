@@ -1,0 +1,15 @@
+@mixin max-down($max) {
+	@media only screen and (max-width: $max - 1) { @content; }
+}
+
+@mixin non-touch {
+ 	@media only screen and (hover: hover) { @content; }
+}
+
+@mixin clearfix {
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+}

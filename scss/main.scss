@@ -1,0 +1,23 @@
+/**
+ * main.scss
+ * Used to compile our SASS files into a concatenated CSS file. 
+ * When adding new page files, import them here!
+ */
+
+// Import Reset
+@import "vendor/reset";
+
+// Import Vendor Styles
+@import "animate/animate";
+
+// Import Components
+@import "components/mixins";
+@import "components/variables";
+@import "components/typography";
+
+// Import Parts
+@import "parts/buttons";
+@import "parts/common";
+
+// Import Pages
+@import "pages/home";

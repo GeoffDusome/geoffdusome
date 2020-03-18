@@ -1,11 +1,11 @@
 {
-	"name": "geoffdusome",
-	"description": "theme for personal site",
+	"name": "tbx-theme",
+	"description": "Base theme for TBX sites",
 	"version": "1.0.0",
 	"scripts": {
 		"gulp": "gulp"
 	},
-	"dependencies": {
+	"devDependencies": {
 		"gulp": "*",
 		"jshint": "*",
 		"gulp-autoprefixer": "*",
@@ -14,13 +14,11 @@
 		"gulp-plumber": "*",
 		"gulp-sass": "*",
 		"gulp-sourcemaps": "*",
-		"gulp-uglify": "*",
+		"gulp-uglify-es": "*",
 		"gulp-util": "*",
 		"gulp-concat": "*",
-		"gulp-replace": "*",
 		"browser-sync": "*",
 		"jshint-stylish": "*",
-		"util": "*",
-		"@geoffdusome/acf-meta-builder": "*"
+		"util": "*"
 	}
 }
