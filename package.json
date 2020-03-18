@@ -1,7 +1,8 @@
 {
-	"name": "tbx-theme",
-	"description": "Base theme for TBX sites",
+	"name": "Geoff Dusome",
+	"description": "Personal Simple Website",
 	"version": "1.0.0",
+	"homepage": "index.html",
 	"scripts": {
 		"gulp": "gulp"
 	},
