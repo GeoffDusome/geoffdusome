@@ -22,4 +22,19 @@
 			}
 		}
 	}
+
+	@include max-down(600px) {
+		height: auto;
+		padding: 120px 0;
+
+		.inner-content-wrap ul li {
+			display: block;
+			margin-right: 0;
+			margin-bottom: 15px;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
 }
