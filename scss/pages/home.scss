@@ -6,36 +6,6 @@
 		width: 80%;
 		margin: 0 auto;
 
-		.image-wrap {
-			display: block;
-			width: 100%;
-			max-width: 400px;
-			position: relative;
-			margin-bottom: 45px;
-
-			img {
-				display: block;
-				width: 100%;
-				height: auto;
-			}
-
-			&:before,
-			&:after {
-				content: '';
-				display: block;
-				width: 110%;
-				height: 15%;
-				position: absolute;
-				top: 10%;
-				left: -5%;
-				background: $black;
-			}
-
-			&:after {
-				top: 75%;
-			}
-		}
-
 		ul {
 			margin-top: 55px;
 			padding-left: 0;
