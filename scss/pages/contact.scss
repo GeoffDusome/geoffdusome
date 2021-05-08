@@ -1,0 +1,29 @@
+.contact {
+    ul {
+        margin-top: 55px;
+        padding-left: 0;
+        font-size: 0;
+    
+        li {
+            display: inline-block;
+            margin-right: 25px;
+            font-size: 1rem;
+    
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    @include max-down(600px) {
+        ul li {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 15px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}
+

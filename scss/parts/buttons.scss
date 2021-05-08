@@ -1,36 +1,97 @@
 .btn, input[type="submit"], button[type="submit"] {
 	appearance: none;
-	display: inline-block;
-	vertical-align: middle;
-	min-width: 200px;
-	border: 2px solid $black;
-	background: none;
-	outline: 0;
-	border-radius: 0;
-	padding: 10px 25px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 250px;
+	height: 50px;
+	position: relative;
 	margin: 0;
+	padding: 12px 20px 10px;
+	border: 2px solid $white;
+	border-radius: 0;
+	outline: 0;
+	background-color: $teal;
 	cursor: pointer;
 
-	font-size: 1rem;
-	line-height: 1em;
-	color: $black;
 	text-decoration: none;
-	text-align: center;
 
-	&:nth-child(2) {
-		margin-left: 15px;
+	.top-key {
+		display: block;
+		width: 20px;
+		height: 2px;
+		position: absolute;
+		top: -2px;
+		left: 10px;
+		background: $teal;
 	}
 
-	&.hover,
-	&:hover {
-		background: $black;
+	.bottom-key-1 {
+		display: block;
+		width: 10px;
+		height: 2px;
+		position: absolute;
+		bottom: -2px;
+		right: 10px;
+		background: $teal;
+	}
+
+	.bottom-key-2 {
+		display: block;
+		width: 20px;
+		height: 2px;
+		position: absolute;
+		bottom: -2px;
+		right: 25px;
+		background: $teal;
+	}
+
+	.top-key,
+	.bottom-key-1,
+	.bottom-key-2 {
+		transition: width .3s, left .3s, right .3s;
+	}
+
+	.text {
+		display: block;
+		width: 100%;
+
+		font-size: 1rem;
+		font-weight: 600;
+		line-height: 1em;
 		color: $white;
+		text-transform: uppercase;
+		text-align: left;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			vertical-align: middle;
+			width: 20px;
+			height: 2px;
+			margin-top: -2px;
+			margin-right: 10px;
+			background: $white;
+			transition: width .3s;
+		}
 	}
 
-	&.disabled,
-	&:disabled {
-		opacity: 0.3;
-		pointer-events: none;
-		cursor: not-allowed;
+	@include non-touch {
+		&:hover {
+			.top-key {
+				width: 0;
+				left: 0;
+			}
+
+			.bottom-key-1,
+			.bottom-key-2 {
+				width: 0;
+				right: 0;
+			}
+
+			.text:before {
+				width: 10px;
+			}
+		}
 	}
 }

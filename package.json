@@ -1,5 +1,5 @@
 {
-	"name": "Geoff Dusome",
+	"name": "geoffdusome",
 	"description": "Personal Simple Website",
 	"version": "1.0.0",
 	"homepage": "index.html",
@@ -7,19 +7,19 @@
 		"gulp": "gulp"
 	},
 	"devDependencies": {
-		"gulp": "*",
-		"jshint": "*",
-		"gulp-autoprefixer": "*",
-		"gulp-jshint": "*",
-		"gulp-notify": "*",
-		"gulp-plumber": "*",
-		"gulp-sass": "*",
-		"gulp-sourcemaps": "*",
-		"gulp-uglify-es": "*",
-		"gulp-util": "*",
-		"gulp-concat": "*",
-		"browser-sync": "*",
-		"jshint-stylish": "*",
-		"util": "*"
+		"gulp": "4.0.2",
+		"jshint": "2.12.0",
+		"gulp-autoprefixer": "7.0.1",
+		"gulp-jshint": "2.1.0",
+		"gulp-notify": "4.0.0",
+		"gulp-plumber": "1.2.1",
+		"gulp-sass": "4.1.0",
+		"gulp-sourcemaps": "3.0.0",
+		"gulp-uglify-es": "2.0.0",
+		"gulp-util": "3.0.8",
+		"gulp-concat": "2.6.1",
+		"browser-sync": "2.26.14",
+		"jshint-stylish": "2.2.1",
+		"util": "0.12.3"
 	}
 }

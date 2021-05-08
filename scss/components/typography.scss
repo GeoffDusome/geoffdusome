@@ -12,6 +12,11 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0.5em;
 	font-family: $h_font;
 	font-weight: 700;
+	color: $dgray;
+
+	&.white {
+		color: $white;
+	}
 
 	&.no-m {
 		margin-bottom: 0;
@@ -19,7 +24,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	font-size: 4rem;
+	font-size: 3rem;
 
 	@include max-down(600px) {
 		font-size: 2rem;

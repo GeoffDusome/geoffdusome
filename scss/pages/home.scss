@@ -1,40 +1,47 @@
 .home {
-	width: 100%;
-	height: 100vh;
+	.main {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		min-height: 500px;
+		background: $dgray;
+		color: $white;
 
-	.inner-content-wrap {
-		width: 80%;
-		margin: 0 auto;
+		.info {
+			width: 60%;
+			padding: 150px 0;
+		}
+		
+		.inner-content-wrap {
+			width: 80%;
+			max-width: 600px;
+			margin: 0 auto;
+		}
 
-		ul {
-			margin-top: 55px;
-			padding-left: 0;
-			font-size: 0;
-
-			li {
-				display: inline-block;
-				margin-right: 25px;
-				font-size: 1rem;
-
-				&:last-child {
-					margin-right: 0;
-				}
-			}
+		.side {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 40%;
+			align-self: stretch;
+			background: $teal;
+			clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 		}
 	}
 
-	@include max-down(600px) {
-		height: auto;
-		padding: 10vw 0;
+	.work {
+		position: relative;
 
-		.inner-content-wrap ul li {
+		&:before {
+			content: '';
 			display: block;
-			margin-right: 0;
-			margin-bottom: 15px;
-
-			&:last-child {
-				margin-bottom: 0;
-			}
+			width: 40%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			right: 10%;
+			background: $lgray;
+			clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
 		}
 	}
 }

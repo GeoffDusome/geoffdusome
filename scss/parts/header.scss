@@ -1,0 +1,48 @@
+header.header {
+    @include clearfix;
+    padding: 15px;
+    background: $lgray;
+
+    .logo {
+        display: block;
+        float: left;
+        margin-bottom: 0;
+
+        font-size: 20px;
+        font-weight: 700;
+        text-decoration: none;
+        color: $dgray;
+    }
+
+    .main-nav {
+        float: right;
+
+        li {
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 15px;
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+
+        a {
+            display: block;
+
+            font-size: 16px;
+            line-height: 20px;
+            font-weight: 500;
+            text-decoration: none;
+            color: $dgray;
+
+            @include non-touch {
+                transition: color .3s;
+
+                &:hover {
+                    color: $teal;
+                }
+            }
+        }
+    }
+}
